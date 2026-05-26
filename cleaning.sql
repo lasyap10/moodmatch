@@ -19,3 +19,10 @@ WHERE
 UPDATE clean_data
 SET
     genres = REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REGEXP_REPLACE(genres, '''id'': \\d+, ''name'': ', ''), '[', ''), '{', ''), '}', ''), ']', ''), '''', '');
+
+-- deleting documentaries
+DELETE
+FROM
+    CLEAN_DATA
+WHERE
+    genres ILIKE '%Documentary%';
