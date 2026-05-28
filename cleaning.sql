@@ -26,3 +26,9 @@ FROM
     CLEAN_DATA
 WHERE
     genres ILIKE '%Documentary%';
+
+DELETE
+FROM
+    CLEAN_DATA
+WHERE
+    genres ILIKE '%Foreign%';
