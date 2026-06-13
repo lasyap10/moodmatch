@@ -42,4 +42,6 @@ WHERE overview != REGEXP_REPLACE(overview, '[^\x00-\x7F]', '');
 DELETE FROM CLEAN_DATA
 WHERE overview ILIKE '%No overview found%'
    OR overview ILIKE '%Not Available%'
-   OR TRIM(overview) = '';
+   OR TRIM(overview) = ''
+   OR overview ILIKE '%x%'
+   OR overview ILIKE '%No overview.%';
