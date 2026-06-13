@@ -32,3 +32,14 @@ FROM
     CLEAN_DATA
 WHERE
     genres ILIKE '%Foreign%';
+
+
+-- removing foreign language overviews
+DELETE FROM CLEAN_DATA
+WHERE overview != REGEXP_REPLACE(overview, '[^\x00-\x7F]', '');
+
+-- removing placeholder overviews
+DELETE FROM CLEAN_DATA
+WHERE overview ILIKE '%No overview found%'
+   OR overview ILIKE '%Not Available%'
+   OR TRIM(overview) = '';
