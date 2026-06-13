@@ -44,4 +44,6 @@ WHERE overview ILIKE '%No overview found%'
    OR overview ILIKE '%Not Available%'
    OR TRIM(overview) = ''
    OR overview ILIKE '%x%'
-   OR overview ILIKE '%No overview.%';
+   OR overview ILIKE '%No overview.%'
+   OR overview ILIKE '%No Overview%'
+   OR overview ILIKE '...';
