@@ -8,15 +8,10 @@ A lot of the recommendation systems we see today recommend films based solely on
 
 
 Tech Stack:
-
 Coding Language: Python
-
 Database: Snowflake
-
 ML/NLP: sci-kit learn(TF-DF, Logistic Regression), numpy
-
 Deployment: Streamlit (in progress)
-
 Dataset used: Kaggle Dataset (TMDB Data set, ~35,000 entries)
 
 
